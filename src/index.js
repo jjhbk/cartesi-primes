@@ -35,7 +35,7 @@ async function handle_advance(data) {
     const payloadStr = viem.hexToString(data.payload);
     JSONpayload = JSON.parse(payloadStr);
   } catch (e) {
-    console.log(`Adding notice with binary value ${payload}`);
+    console.log(`Adding notice with binary value ${data.payload}`);
     await fetch(rollup_server + "/report", {
       method: "POST",
       headers: {
